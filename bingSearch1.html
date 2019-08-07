@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>QuickStart</title>
+    <link rel="stylesheet" type="text/css" href="./ext-all.css" />
+    <!-- LIBS -->
+    <script type="text/javascript" src="./ext-base.js"></script>
+    <!-- ENDLIBS -->
+    <script type="text/javascript" src="./ext-all.js"></script>
+    <script>
+        Ext.onReady(function() {
+            var container = new Ext.Container({
+                renderTo: 'test',
+                layout: 'table',
+                width: 800,
+                height: 100,
+                layoutConfig: {
+                    columns: 2
+                },
+                items: [
+                    {
+                        width: 250,
+                        layout: 'hbox',
+                        xtype: 'container',
+                        items: [{
+                            xtype: 'box',
+                            height: 100,
+                            autoEl: {
+                                tag: 'img',
+                                src: 'Bing.png'
+                            }
+                        }]
+                    },
+                        {
+                            xtype: 'tabpanel',
+                            activeTab: 'tabA',
+                            width: 500,
+                            height: 50,
+                            style: 'margin-left: 10px',
+                            items: [
+                                {
+                                    id: 'tabA',
+                                    title: 'Chinese',
+                                    items: [{
+                                        xtype: 'trigger',
+                                        width:500,
+                                        triggerClass: 'x-form-search-trigger'
+                                    }],
+                                },
+                                {
+
+                                    id: 'tabB',
+                                    title: 'Forign',
+                                    width:500,
+                                    items: [{
+                                        xtype: 'trigger',
+                                        width:500,
+                                        triggerClass: 'x-form-search-trigger'
+                                    }],
+                                }
+                            ]
+                        }
+                    ]
+                }
+            )
+            });
+    </script>
+</head>
+<body>
+<div id="test"></div>
+</body>
+</html>
